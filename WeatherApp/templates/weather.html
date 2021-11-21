@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+
+<!--Head-->
+
+{% block head %}
+
+<link rel="stylesheet" href="static/weatherStyle.css">
+
+{% endblock %}
+
+
+<!--Body-->
+
+{% block body %}
+
+<h2>Your weather</h2>
+
+
+<form method="post" action="/result">
+
+    <!--Flash messages-->
+
+    {% with message = get_flashed_messages() %}
+       {% if message %}
+            {% for x in message %}
+                  <h2 style="color: red;">{{ x }}</h2>
+            {% endfor %}
+       {% endif %}
+    {% endwith %}
+
+
+    <p><h3>Enter a city name to know the weather</h3></p>
+    <input type="text" class="city" name="city" placeholder="City"><br>
+
+    <label for="units" style="font-size: 20px; ">Select units:</label>
+
+    <select name="units" id="units">
+
+        <option  id="metric" value="metric">Fahrenheit</option>
+        <option id="metric" value="imperial">Celsius</option>
+
+    </select><br>
+
+    <button type="submit" name="submit">Submit</button>
+
+</form>
+
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+<!--Head-->
+
+{% block head %}
+
+<link rel="stylesheet" href="static/resultStyle.css">
+
+{% endblock %}
+
+
+
+<!--Body-->
+
+{% block body %}
+
+
+<ul>
+    <li>
+        <a href="/weather">Back</a>
+    </li>
+</ul> 
+
+<table>
+    <tr>
+        {% for x in row_table %}
+            <th>{{ x }}</th>
+    
+        {% endfor %}
+    </tr>
+
+    <tr>
+        {% for x in data %}
+            <th>{{ x }}</th>
+    
+        {% endfor %}
+
+    </tr>
+        
+</table>
+
+
+{% endblock %}
