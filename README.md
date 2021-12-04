@@ -5,4 +5,4 @@ You have to specify a city which you want to know the weather from, you can sele
 
 this application as well connects with an API to gives the weather after your query.
 
-Technologies used: Python, flask and OpenWeather api.
+Technologies used: Python, flask, OpenWeather api, HTML and CSS.
